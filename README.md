@@ -24,3 +24,5 @@ This repository contains modules for deploying and managing Azure sentinel suppo
 [license_badge_link]:./LICENSE.txt
 [maintained_badge_image]:https://img.shields.io/badge/maintained%20by-quantum.security-00da55
 [maintained_badge_link]:https://www.quantum.security?utm_source=github&utm_medium=organic_oss&utm_campaign=terraform-azurerm-sentinel-rules
+
+<!-- CI verification after armor migration (TRU-329) -->
