@@ -28,7 +28,7 @@ concurrency:
 jobs:
   validation:
     name: Validation
-    uses: quantum-sec/actions/.github/workflows/terraform-module-validation.yaml@v1
+    uses: armor/mdr-actions/.github/workflows/terraform-module-validation.yaml@v1
 
   release:
     name: Release
@@ -36,7 +36,7 @@ jobs:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
     permissions:
       contents: write
-    uses: quantum-sec/actions/.github/workflows/semantic-release.yaml@v1.4.0
+    uses: armor/mdr-actions/.github/workflows/semantic-release.yaml@v1.5.0
     secrets:
       GIT_TOKEN_BASIC: ${{ secrets.GIT_TOKEN_BASIC }}
 
@@ -44,9 +44,9 @@ jobs:
     name: Update infrastructure-modules references
     needs: release
     if: needs.release.outputs.semver != ''
-    uses: quantum-sec/actions/.github/workflows/update-source-reference.yaml@v1.4.0
+    uses: armor/mdr-actions/.github/workflows/update-source-reference.yaml@v1.5.0
     with:
-      package_name: terraform-azurerm-sentinel-rules
+      package_name: mdr-terraform-azurerm-sentinel-rules
     secrets:
       GIT_TOKEN_BASIC: ${{ secrets.GIT_TOKEN_BASIC }}
       IMPORT_GPG_KEY: ${{ secrets.IMPORT_GPG_KEY }}
