@@ -5,7 +5,7 @@
   "description": "Contains modules for deploying and managing Azure Sentinel Alert Rules.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:quantum-sec/terraform-azurerm-sentinel-rules.git"
+    "url": "git@github.com:armor/mdr-terraform-azurerm-sentinel-rules.git"
   },
   "author": "Quantum Security Pte. Ltd.",
   "license": "Apache-2.0",
